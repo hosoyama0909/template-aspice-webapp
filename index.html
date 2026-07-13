@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新しいアプリ（A-SPICE雛形）</title>
+<!--
+  リポジトリ直下の転送用ページ。
+  本体は 03_implementation/index.html。GitHub Pages が「ブランチ配信（root）」でも
+  アプリが開くようにするための入口。
+  毎回キャッシュ回避のためのパラメータ(?v=時刻)を付けて本体を読み込むので、
+  更新後に古い画面が残らない（本体HTMLは常に最新を取得）。
+-->
+<link rel="canonical" href="./03_implementation/index.html">
+<meta http-equiv="refresh" content="0; url=./03_implementation/index.html">
+<script>
+  (function(){
+    var base='./03_implementation/index.html';
+    var q=location.search ? location.search+'&v='+Date.now() : '?v='+Date.now();
+    location.replace(base+q+location.hash);
+  })();
+</script>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans',sans-serif;
+    background:#f4efe6;color:#2a2620;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}
+  a{color:#1b4332;font-weight:700}
+</style>
+</head>
+<body>
+<p>アプリを開いています…<br><a href="./03_implementation/index.html">開かない場合はこちらをタップ</a></p>
+</body>
+</html>
